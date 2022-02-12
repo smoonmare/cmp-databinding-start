@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Server } from './server.interface';
 
 @Component({
@@ -9,27 +9,25 @@ import { Server } from './server.interface';
 export class AppComponent {
   serverElements: Server[] = [
     {
-      type: 'test server',
+      type: 'blueprint',
       name: 'Test server 1',
+      content: 'Test content'
+    },
+    {
+      type: 'dev server',
+      name: 'Dev server 1',
+      content: 'Test content'
+    },
+    {
+      type: 'dev server',
+      name: 'Dev server 2',
+      content: 'Test content'
+    },
+    {
+      type: 'server',
+      name: 'Prod server',
       content: 'Test content'
     }
   ];
-  newServerName = '';
-  newServerContent = '';
 
-  onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
-  }
-
-  onAddBlueprint() {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
-  }
 }
