@@ -18,15 +18,15 @@ export class CockpitComponent implements OnInit {
 
   onAddServer() {
     this.serverCreated.emit({
-      serverName: this.newServerName,
-      serverContent: this.newServerContent
+      serverName: this.newServerName ? '' : 'Server name',
+      serverContent: this.newServerContent ? '' : 'Server content'
     });
   }
 
   onAddBlueprint() {
     this.blueprintCreated.emit({
-      serverName: this.newServerName,
-      serverContent: this.newServerContent
+      serverName: this.newServerName ? '' : 'Blueprint name',
+      serverContent: this.newServerContent ? '' : 'Blueprint content'
     })
   }
 
