@@ -46,4 +46,12 @@ export class AppComponent {
     });
   }
 
+  onChange() {
+    this.serverElements[0].name = 'New Server Name';
+  }
+
+  onDestroy() {
+    this.serverElements.splice(0, 1);
+  }
+
 }
